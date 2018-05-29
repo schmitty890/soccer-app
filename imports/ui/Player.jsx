@@ -30,8 +30,8 @@ export default class Player extends Component {
         <CardText>
           <div style={styles.wrapper}>
             <Chip
-              backgroundColor={blue200}
-              style={styles.chip}
+            backgroundColor={blue200}
+            style={styles.chip}
             >
               <Avatar size={32} color={blue200} backgroundColor={blue900}>
                 2
@@ -39,13 +39,13 @@ export default class Player extends Component {
               Ball manipulation
             </Chip>
             <Chip
-              backgroundColor={blue200}
-              style={styles.chip}
+            backgroundColor={blue200}
+            style={styles.chip}
             >
-              <Avatar size={32} color={blue200} backgroundColor={blue900}>
-                2
-              </Avatar>
-              Kicking abilities
+            <Avatar size={32} color={blue200} backgroundColor={blue900}>
+              2
+            </Avatar>
+            Kicking abilities
           </Chip>
           <Chip
             backgroundColor={blue200}
@@ -54,7 +54,7 @@ export default class Player extends Component {
             <Avatar size={32} color={blue200} backgroundColor={blue900}>
               2
             </Avatar>
-              Passing abilities
+            Passing abilities
           </Chip>
           <Chip
             backgroundColor={blue200}
@@ -63,7 +63,7 @@ export default class Player extends Component {
             <Avatar size={32} color={blue200} backgroundColor={blue900}>
               2
             </Avatar>
-              Duel/Tackling abilities
+            Duel/Tackling abilities
           </Chip>
           <Chip
             backgroundColor={blue200}
@@ -72,7 +72,7 @@ export default class Player extends Component {
             <Avatar size={32} color={blue200} backgroundColor={blue900}>
               2
             </Avatar>
-              Field speed coverage
+            Field speed coverage
           </Chip>
           <Chip
             backgroundColor={blue200}
@@ -81,7 +81,7 @@ export default class Player extends Component {
             <Avatar size={32} color={blue200} backgroundColor={blue900}>
               2
             </Avatar>
-              Blocking abilities
+            Blocking abilities
           </Chip>
           <Chip
             backgroundColor={blue200}
@@ -90,7 +90,7 @@ export default class Player extends Component {
             <Avatar size={32} color={blue200} backgroundColor={blue900}>
               2
             </Avatar>
-              Game strategy
+            Game strategy
           </Chip>
           <Chip
             backgroundColor={blue200}
@@ -99,16 +99,12 @@ export default class Player extends Component {
             <Avatar size={32} color={blue200} backgroundColor={blue900}>
               2
             </Avatar>
-              Playmaking risks
+            Playmaking risks
           </Chip>
           </div>
         </CardText>
         <CardActions>
-          {/* <RaisedButton
-            label="Edit player/stats"
-            labelPosition="before"
-            style={styles.button}
-          /> */}
+
         </CardActions>
       </Card>
     )

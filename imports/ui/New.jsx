@@ -1,10 +1,36 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+import { Players } from '../api/players';
 
-export default class Example extends Component {
+class New extends Component {
+  submitPlayer(event) {
+    event.preventDefault();
+
+    Players.insert({
+      name: this.refs.name.value,
+      team: this.refs.team.value,
+      ballManipulation: this.refs.ballManipulation.value,
+      kickingAbilities: this.refs.kickingAbilities.value,
+      passingAbilities: this.refs.passingAbilities.value,
+      duelTackling: this.refs.duelTackling.value,
+      fieldCoverage: this.refs.fieldCoverage.value,
+      blockingAbilities: this.refs.blockingAbilities.value,
+      gameStrategy: this.refs.gameStrategy.value,
+      playmakingRisks: this.refs.playmakingRisks.value,
+      notes: this.refs.notes.value,
+      createdAt: new Date(),
+    });
+
+    console.log("Success player submitted!");
+
+    this.props.history.push('/');
+  
+  }
+
   render() {
     return (
       <div className="row">
-        <form className="col s12">
+        <form className="col s12" onSubmit={this.submitPlayer.bind(this)}>
           <h3>Add a new player</h3>
 
           <div className="row">
@@ -101,10 +127,10 @@ export default class Example extends Component {
           </div>
 
           <div className="row">
-            <div className="col s6">
+            <div className="input-field col s6">
               <textarea placeholder="Notes" ref="notes" className="materialize-textarea"/>
             </div>
-            <div className="col s6">
+            <div className="input-field col s6">
               <button className="btn waves-effect waves-light" type="submit" name="action">Submit
                 <i className="material-icons right">send</i>
               </button>
@@ -116,3 +142,5 @@ export default class Example extends Component {
     )
   }
 }
+
+export default withRouter(New);
