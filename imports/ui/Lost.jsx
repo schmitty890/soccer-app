@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+//create Lost Component
 export default class Lost extends Component {
   render() {
     return (

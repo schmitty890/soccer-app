@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+//create Edit Component
 export default class Edit extends Component {
   showTeamStats() {
     this.props.showTeamStats();

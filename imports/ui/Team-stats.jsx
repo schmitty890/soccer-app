@@ -1,9 +1,10 @@
+//show stats for team
 import React, { Component } from 'react';
 import {Radar} from 'react-chartjs-2';
 import Divider from 'material-ui/Divider';
 
 
-
+//create TeamStats Component
 export default class TeamStats extends Component {
   render() {
     const players = this.props.players;

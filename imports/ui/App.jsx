@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+//where the app runs
+import React, { Component } from 'react'; // import Component from react
 import PropTypes from 'prop-types';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
-import AppBar from 'material-ui/AppBar';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'; // import material ui theme
+import RaisedButton from 'material-ui/RaisedButton'; // import raised button from material ui.
+import AppBar from 'material-ui/AppBar'; // import material ui application header bar
 import { List } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import { createContainer } from 'meteor/react-meteor-data';
@@ -11,6 +12,7 @@ import { Link } from 'react-router-dom';
 // database - collection
 import { Players } from '../api/players';
 
+//everytime you use a Component inside another Component, you need to import that Component
 import TeamList from './Team-list';
 import TeamStats from './Team-stats';
 import Player from './Player';
@@ -30,7 +32,7 @@ const tempPlayer = {
   playmakingRisks: 2,
   notes: "This player is only temporary",
 }
-
+// create a class called App, which is the Component
 export class App extends Component {
   constructor(props) {
     super(props);

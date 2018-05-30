@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Players } from '../api/players';
 
+//create New Component
 class New extends Component {
   submitPlayer(event) {
     event.preventDefault();
