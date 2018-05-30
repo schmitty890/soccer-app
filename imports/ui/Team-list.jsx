@@ -25,6 +25,7 @@ export default class TeamList extends Component {
     // prop attributes primaryText, leftAvatar, rightIcon are provided by material ui. see material ui documentation
     // Avatar component from material ui is passed as leftAvatar
     // ActionDeleteForever is from material ui https://www.materialui.co/icon/delete-forever
+    // See these in the node modules material-ui/List/ListItem.js file, you will see these props provided
     return (
       <ListItem
         primaryText={this.props.player.name}
