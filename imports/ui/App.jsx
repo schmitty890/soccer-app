@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'; // import material ui theme
 import RaisedButton from 'material-ui/RaisedButton'; // import raised button from material ui.
 import AppBar from 'material-ui/AppBar'; // import material ui application header bar
-import { List } from 'material-ui/List';
-import Divider from 'material-ui/Divider';
+import { List } from 'material-ui/List'; // import List item from material ui, a component used to render lists of things. this is the same as <ul><li></li></ul>
+import Divider from 'material-ui/Divider'; // import Divider from material ui, divides section into the app
 import { createContainer } from 'meteor/react-meteor-data';
 import { Link } from 'react-router-dom';
 
@@ -47,8 +47,10 @@ export class App extends Component {
     this.showTeamStats = this.showTeamStats.bind(this);
   }
 
-  renderPlayers() {
-    return this.props.players.map((player) => (
+  renderPlayers() { // take the list of players listed above, map them to a TeamList component
+    return this.props.players.map((player) => ( 
+      // key and player is passed as attributes to TeamList as props
+      // pass. uniquie id because it is unique and the player object
       <TeamList key={player._id} player={player} updateCurrentPlayer={this.updateCurrentPlayer}/>
     ));
   }

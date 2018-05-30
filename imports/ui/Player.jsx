@@ -12,7 +12,7 @@ const styles = {
   chip: {
     margin: 4,
   },
-  wrapper: {
+  wrapper: { // wrapper displays chips inline, they do not display block
     display: 'flex',
     flexWrap: 'wrap',
   },
@@ -44,7 +44,7 @@ export default class Player extends Component {
           <img src="player.jpg" />
         </CardMedia>
         <CardText>
-          <div style={styles.wrapper}>
+          <div style={styles.wrapper}> 
             <Chip backgroundColor={blue200} style={styles.chip}>
               <Avatar size={32} color={lightBlue50} backgroundColor={lightBlue800}>
                 {player.ballManipulation}
