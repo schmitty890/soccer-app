@@ -34,14 +34,16 @@ const tempPlayer = {
 }
 // create a class called App, which is the Component
 export class App extends Component {
+  // constructor is how we set up state for the app.
   constructor(props) {
+    // super allows to pass in props
     super(props);
 
     // setting up the state
     this.state = {
       currentPlayer: tempPlayer,
       showEditPlayer: false,
-     };
+    };
     this.updateCurrentPlayer = this.updateCurrentPlayer.bind(this);
     this.showEditForm = this.showEditForm.bind(this);
     this.showTeamStats = this.showTeamStats.bind(this);
@@ -61,18 +63,21 @@ export class App extends Component {
     });
   }
 
+  // set new state
   showEditForm() {
     this.setState({
       showEditPlayer: true,
     });
   }
 
+  // set new state
   showTeamStats() {
     this.setState({
       showEditPlayer: false,
     });
   }
 
+  // set new state
   showForm(){
     if(this.state.showEditPlayer === true) {
       return ( <Edit currentPlayer={this.state.currentPlayer}
